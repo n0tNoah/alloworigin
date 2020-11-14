@@ -1,4 +1,5 @@
-import requesocks
+# import requesocks
+import socks
 import random
 
 
@@ -7,7 +8,7 @@ class pytor:
     ports = [9051, 9052, 9053, 9054, 9055]
     port = 0
     # init session
-    session = requesocks.session()
+    session = socks.socksocket()
 
     def __init__(self):
         self.random_jump()

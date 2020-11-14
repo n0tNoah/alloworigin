@@ -1,17 +1,17 @@
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse, HttpResponse
-from django.shortcuts import render_to_response
-from models import Request
+# from . import models
+from .models import Request
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 import requests
 import json
-from pytor import pytor
+from .pytor import pytor
 
-
+# Create your views here.
 def index(request):
-    return render_to_response('index.html')
-
+	return render(request, "new_home.html")
 
 @csrf_exempt
 def get(request):
